@@ -8,32 +8,60 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
       /* Simple styles for the frames */
-      .frame-header { background: #6c757d; color: #fff; padding: 1rem; }
-      .frame { background: #f8f9fa; border: 1px solid #e9ecef; padding: 1rem; min-height: 100px; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+      .frame-header { 
+        background: #FF7F50; 
+        color: #fff; 
+        padding: 1rem; 
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+      .frame { 
+        background: #FFE4E1; 
+        border: 1px solid #FFB6C1; 
+        padding: 1rem; 
+        min-height: 100px;
+        height: 100%;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
       .qual-list { margin-top: 0.5rem; }
       .blink {
         animation: blinker 1.2s linear infinite;
-        color: #dc3545;
+        color: #FF4500;
         font-weight: 600;
       }
       @keyframes blinker { 50% { opacity: 0; } }
       .small-muted { color:#6c757d; }
+      .row { 
+        margin-right: 0;
+        margin-left: 0;
+      }
+      .col-md-4, .col-md-6 {
+        padding: 10px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
     </style>
   </head>
   <body>
-    <div class="container my-4">
+    <div class="container">
       <!-- First Frame: Name and address (full width) -->
-      <div class="row mb-3">
-        <div class="col-12 frame-header">
-          <h4 class="mb-0">First Frame: Name and address</h4>
-          <small class="small-muted">John Doe, 123 Example Street, City, Country</small>
+      <div class="row">
+        <div class="col-12">
+          <div class="frame-header">
+            <h4 class="mb-0">First Frame: Name and address</h4>
+            <small class="small-muted">John Doe, 123 Example Street, City, Country</small>
+          </div>
         </div>
       </div>
 
       <!-- Second row: two columns -->
-      <div class="row mb-3">
+      <div class="row">
         <div class="col-md-6">
-          <div class="frame">
+          <div class="frame h-100">
             <h5>Second frame</h5>
             <p class="mb-1"><strong>Bulleted list of qualifications</strong></p>
             <ul class="qual-list">
@@ -44,7 +72,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="frame">
+          <div class="frame h-100">
             <h5>Third frame</h5>
             <p class="mb-1"><strong>Links to favourite sites</strong></p>
             <ul>
@@ -58,25 +86,24 @@
 
       <!-- Third row: three columns -->
       <div class="row">
-        <div class="col-md-4 mb-3">
-          <div class="frame">
+        <div class="col-md-4">
+          <div class="frame h-100">
             <h6>Fourth frame</h6>
             <p class="mb-2"><strong>Scrolling message</strong></p>
-            <!-- simple scrolling message; <marquee> kept for assignment-style behaviour -->
             <div class="small">
               <marquee behavior="scroll" direction="left">Welcome to the assignment demo — this message scrolls across the frame.</marquee>
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-3">
-          <div class="frame text-center">
+        <div class="col-md-4">
+          <div class="frame h-100 text-center">
             <h6>Fifth frame</h6>
             <p class="mb-2"><strong>Blinking reminders</strong></p>
             <div class="blink">Don't forget to submit your assignment!</div>
           </div>
         </div>
-        <div class="col-md-4 mb-3">
-          <div class="frame text-center">
+        <div class="col-md-4">
+          <div class="frame h-100 text-center">
             <h6>Sixth frame</h6>
             <p class="mb-2"><strong>Image</strong></p>
             <img src="https://via.placeholder.com/200x120.png?text=Image" alt="placeholder" class="img-fluid rounded">
